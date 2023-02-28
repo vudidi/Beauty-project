@@ -1,0 +1,33 @@
+.menu {
+  &__panel {
+    padding: 30px;
+  }
+  &__items {
+    max-width: 735px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__item {
+    &-link {
+      @include font(16px, 400, 18px, #000);
+      transition: ease 0.3s;
+      &:hover {
+        @include font(16px, 400, 18px, #66c05d);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .menu {
+    &__items {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    &__item {
+      margin: 0 15px 15px;
+    }
+  }
+}

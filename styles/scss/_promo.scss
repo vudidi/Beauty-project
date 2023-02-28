@@ -1,0 +1,125 @@
+@import "mixine-font";
+
+.promo {
+  background-image: url(../../src/images/bg-img.png);
+  background-position: center;
+  background-size: cover;
+  &__wrapper {
+    max-width: 1210px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 0 0 50px;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__text {
+    margin: 192px 0;
+  }
+  &__title {
+    @include font(48px, 700, 56px, #fff);
+    margin: 0;
+  }
+  &__desc {
+    @include font(14px, 400, 20px, #fff);
+    max-width: 308px;
+    width: 100%;
+    margin: 50px 0;
+  }
+  &__button {
+    @include font(14px, 400, 16px, #fff);
+    background-color: #66c05d;
+    width: 170px;
+    height: 40px;
+    border: 2px solid #fff;
+    border-radius: 40px;
+    align-self: center;
+    transition: ease 0.5s;
+    &:hover {
+      background-color: #46a03d;
+    }
+  }
+}
+
+@media screen and (max-width: 1600px) {
+  .promo {
+    &__text {
+      margin: 192px 0 102px;
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .promo {
+    &__text {
+      margin: 102px 0 102px;
+    }
+    &__title {
+      @include font(32px, 700, 56px, #fff);
+    }
+    &__desc {
+      @include font(12px, 400, 20px, #fff);
+      max-width: 180px;
+      width: 100%;
+      margin: 30px 0;
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .promo {
+    &__text {
+      margin: 60px 0 60px;
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .promo {
+    &__text {
+      margin: 30px 0 30px;
+    }
+    &__title {
+      @include font(24px, 700, 28px, #fff);
+    }
+    &__desc {
+      @include font(10px, 400, 20px, #fff);
+      max-width: 160px;
+      width: 100%;
+      margin: 20px 0;
+    }
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .promo {
+    &__text {
+      margin: 30px 0 30px;
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .promo {
+    &__text {
+      margin: 30px 0 30px;
+    }
+    &__title {
+      @include font(20px, 700, 28px, #fff);
+    }
+    &__desc {
+      @include font(8px, 400, 12px, #fff);
+      max-width: 120px;
+      width: 100%;
+      margin: 20px 0;
+    }
+    &__button {
+      @include font(10px, 400, 12px, #fff);
+      background-color: #66c05d;
+      width: 100px;
+      height: 26px;
+      border: 2px solid #fff;
+      border-radius: 40px;
+      align-self: center;
+    }
+  }
+}

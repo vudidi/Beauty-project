@@ -1,0 +1,143 @@
+@import "mixine-font";
+
+.subscribe {
+  background-color: #efefef;
+  padding: 0 50px 132px;
+  &__cards {
+    max-width: 1110px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__card {
+    max-width: 540px;
+    width: 100%;
+    background-color: #66c05d;
+    display: flex;
+    &_type_email {
+      margin: 0 30px 0 0;
+    }
+    &_type_map {
+    }
+  }
+  &__container {
+    margin: 35px 65px 0 40px;
+    min-height: 215px;
+    display: flex;
+    flex-direction: column;
+  }
+  &__card-title {
+    @include font(18px, 700, 21px, #fff);
+  }
+  &__card-desc {
+    @include font(14px, 400, 20px, #fff);
+    max-width: 231px;
+    width: 100%;
+    margin: 25px 0 0;
+  }
+  &__card-input {
+    margin: auto 0 35px 0;
+    padding: 0 25px;
+    align-self: flex-start;
+    width: 225px;
+    height: 40px;
+    border-radius: 30px;
+    border: 2px solid #66c05d;
+    &::placeholder {
+      @include font(14px, 400, 16px, #c4c4c4);
+      text-align: left;
+    }
+    &:focus {
+      border: 2px solid #46a03d;
+    }
+  }
+  &__card-icon {
+    background-image: url(../../src/images/mail.svg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 140px;
+    height: 107px;
+    align-self: center;
+    margin: 0 40px 0 0;
+  }
+  &__card-button {
+    margin: auto 0 35px 0;
+    align-self: flex-start;
+    width: 170px;
+    height: 35px;
+    background-color: #66c05d;
+    border: 2px solid #ffffff;
+    border-radius: 30px;
+    @include font(14px, 400, 16px, #fff);
+    transition: ease 0.5s;
+    &:hover {
+      background-color: #46a03d;
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .subscribe {
+    &__cards {
+      flex-direction: column;
+      align-items: center;
+    }
+    &__card {
+      &_type_email {
+        margin: 0 0 30px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .subscribe {
+    &__container {
+      margin: 35px auto 0 40px;
+    }
+    &__card {
+      max-width: 540px;
+      flex-direction: column-reverse;
+      align-items: flex-start;
+    }
+    &__card-icon {
+      align-self: flex-start;
+      margin: 20px 0 0 40px;
+      width: 80px;
+      height: 64px;
+    }
+    &__card-title {
+      @include font(16px, 700, 21px, #fff);
+    }
+    &__card-desc {
+      @include font(12px, 400, 20px, #fff);
+      max-width: 210px;
+    }
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .subscribe {
+    padding: 0 10px 132px;
+    &__card {
+      max-width: 300px;
+    }
+    &__container {
+      margin: 20px auto 0;
+    }
+    &__card-icon {
+      margin: 35px auto 0;
+    }
+    &__card-title {
+      @include font(16px, 700, 21px, #fff);
+    }
+    &__card-desc {
+      @include font(12px, 400, 20px, #fff);
+      max-width: 210px;
+    }
+    &__card-button {
+      align-self: center;
+    }
+  }
+}

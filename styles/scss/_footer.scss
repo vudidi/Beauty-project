@@ -1,0 +1,134 @@
+@import "mixine-font";
+
+.footer {
+  &__container {
+    max-width: 1170px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__social-icons {
+    display: flex;
+  }
+  &__social-icon {
+    background-size: 50% 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 45px;
+    height: 45px;
+    position: relative;
+    margin: 0 20px 0 0;
+    &_type_youtube {
+      background-image: url(../../src/images/youtube-icon.svg);
+    }
+    &_type_vk {
+      background-image: url(../../src/images/vk-icon.svg);
+    }
+    &_type_fb {
+      background-image: url(../../src/images/fb-icon.svg);
+    }
+    &_type_inst {
+      background-image: url(../../src/images/inst-icon.svg);
+    }
+  }
+  &__social-circle {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: 2px solid #66c05d;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: ease 0.5s;
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.4);
+    }
+  }
+  &__contacts {
+    padding: 40px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__adress {
+    @include font(14px, 400, 16px, #000);
+  }
+  &__phone {
+    @include font(16px, 400, 18px, #000);
+    margin: 0 50px 0 90px;
+  }
+  &__callback {
+    @include font(14px, 400, 16px, #000);
+    background-color: transparent;
+    width: 170px;
+    height: 40px;
+    border: 2px solid #66c05d;
+    border-radius: 40px;
+    align-self: center;
+    transition: ease 0.5s;
+    &:hover {
+      background-color: #66c05d;
+      color: #fff;
+    }
+  }
+  &__wrapper {
+    background-color: #efefef;
+    padding: 25px 0;
+  }
+  &__rights {
+    @include font(12px, 400, 14px, #828282);
+  }
+  &__privacy {
+    @include font(12px, 400, 14px, #828282);
+    transition: ease 0.5s;
+    &:hover {
+      @include font(12px, 400, 14px, #66c05d);
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .footer {
+    &__rights {
+      max-width: 480px;
+      width: 100%;
+    }
+    &__phone {
+      @include font(16px, 400, 18px, #000);
+      margin: 0 30px 0 60px;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .footer {
+    &__contacts {
+      flex-direction: column;
+    }
+    &__phone {
+      margin: 30px 0;
+    }
+    &__rights {
+      max-width: 380px;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .footer {
+    &__container {
+      flex-direction: column;
+    }
+    &__social-icons {
+      margin: 40px 0 0;
+    }
+    &__rights {
+      max-width: 280px;
+      text-align: center;
+      margin: 0 0 10px;
+    }
+  }
+}
