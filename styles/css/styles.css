@@ -799,6 +799,8 @@ h6 {
 }
 .specials__icon {
   background-image: url(../../src/images/car-icon.svg);
+  background-position: center;
+  background-repeat: no-repeat;
   width: 190px;
   height: 62px;
 }
